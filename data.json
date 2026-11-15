@@ -1,0 +1,273 @@
+{
+  "users/djamel_cns": {
+    "username": "djamel_cns",
+    "salt": "d50b45a8f79538967e41bad21babf5f2",
+    "hash": "52ab16709ea70cb860d7c4d2ae9ed7ed6241b0a83036700aed90b346260cc4786bbf5c20e28e603e0045d5a952fe2296425a78205bbddde83f0c24623d956fa7",
+    "createdAt": 1794692908019
+  },
+  "sessions/bc4c27de62657c78de42789cd0e2ab2e1599b390583b1a557447df13fbbb2d8f": {
+    "username": "djamel_cns",
+    "createdAt": 1794692908023
+  },
+  "sessions/28b9fc2f18b9e6a776ac71c05f2b094bd49b9192ae623e75f3c6e635455b8fb3": {
+    "username": "djamel_cns",
+    "createdAt": 1794694299724
+  },
+  "challenges/6d4e0d06-34b8-4c73-843c-57fc96494b83": {
+    "id": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "name": "Save The Cedars",
+    "points": 250,
+    "referenceCode": "ECO-CEDAR-101",
+    "createdAt": 1794696432727
+  },
+  "users/test_visitor_1": {
+    "username": "test_visitor_1",
+    "salt": "7aa4e5b0018f67fbd6c8eb19d70c331e",
+    "hash": "8584a22af375fdea41fa9a9d5e171edc78a3f670ab76411d10547d82e7f64657053c24630c82e4c28144f941acdf0ce7ebe15f8d802845497e9c002aaf1164d2",
+    "createdAt": 1794696432832
+  },
+  "sessions/9be21792898895005ebba7c95601cb6bde9c916c99a9da2430a06971e6e4ef7c": {
+    "username": "test_visitor_1",
+    "createdAt": 1794696432832
+  },
+  "wins/a532f127-d780-49bc-8915-218b66fc040b": {
+    "id": "a532f127-d780-49bc-8915-218b66fc040b",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794696432838
+  },
+  "sessions/531fa05c54fea3df1885a987e682f0adcaec8237af995e5db51fb1ec0e1cc36d": {
+    "username": "test_visitor_1",
+    "createdAt": 1794696517900
+  },
+  "sessions/f19fa11d1af2408b7828b031fe09a53097e1e18c0ba8bc3e00ab17948096cbc2": {
+    "username": "test_visitor_1",
+    "createdAt": 1794696825944
+  },
+  "wins/dd8844f6-0942-40b6-a77a-d0d84e3cbcfa": {
+    "id": "dd8844f6-0942-40b6-a77a-d0d84e3cbcfa",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794696825978
+  },
+  "wins/182cebe8-34e3-4e40-9723-10814c72fffe": {
+    "id": "182cebe8-34e3-4e40-9723-10814c72fffe",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794696825983
+  },
+  "wins/04cff24c-99b6-446e-a4e5-e7a1b1b5bdfe": {
+    "id": "04cff24c-99b6-446e-a4e5-e7a1b1b5bdfe",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794696825986
+  },
+  "wins/28e8c5de-7f92-4c64-bf1b-4519b087b7a3": {
+    "id": "28e8c5de-7f92-4c64-bf1b-4519b087b7a3",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794696866822
+  },
+  "wins/3b89a9a2-5f3d-4302-ad10-cd8a29787057": {
+    "id": "3b89a9a2-5f3d-4302-ad10-cd8a29787057",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794697737209
+  },
+  "wins/b8af37ac-f0be-40f0-9d44-4d3bff3cd8a0": {
+    "id": "b8af37ac-f0be-40f0-9d44-4d3bff3cd8a0",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794697943751
+  },
+  "wins/ae72ed1e-5a0a-4563-b332-a1c4a0899c50": {
+    "id": "ae72ed1e-5a0a-4563-b332-a1c4a0899c50",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794699762095
+  },
+  "sessions/0fa1ef4be329fb0a1097bc36b7913cf3683c437d7b93a3d1ce89a8874a5fb5ef": {
+    "username": "test_visitor_1",
+    "createdAt": 1794723774757
+  },
+  "wins/1128ca9e-2b01-4651-a9fc-a5cc1729dee3": {
+    "id": "1128ca9e-2b01-4651-a9fc-a5cc1729dee3",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794723774772
+  },
+  "wins/ffdf4125-f13e-41cf-9e9b-9d70a1790d6d": {
+    "id": "ffdf4125-f13e-41cf-9e9b-9d70a1790d6d",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794724065917
+  },
+  "wins/26dedacb-0251-4ce0-9425-daadf3cd7a77": {
+    "id": "26dedacb-0251-4ce0-9425-daadf3cd7a77",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794724194432
+  },
+  "users/djamel_winner": {
+    "username": "djamel_winner",
+    "salt": "22f2353c042e2c3f635155bc41d4bc08",
+    "hash": "1847fc04c425c9da2741c588e4c5fc6684224850da236c5e51dc8cdf960906fd77eb77ad8b5395063d53114afca9f84a67ba8c874a46949fed2759e478e2875d",
+    "createdAt": 1794724535396
+  },
+  "sessions/3c77864e80ec5702331bc2d4f447c3cde2bf1770661b818ecd5b73bd5073dec6": {
+    "username": "djamel_winner",
+    "createdAt": 1794724535406
+  },
+  "challenges/f8d78e64-94c7-4612-ba19-2eab65febc53": {
+    "id": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "name": "try",
+    "points": 160,
+    "referenceCode": "ECO-ZDC3BN",
+    "createdAt": 1794724601703
+  },
+  "wins/f6a70ed2-58fb-4e06-9496-00a651668f5e": {
+    "id": "f6a70ed2-58fb-4e06-9496-00a651668f5e",
+    "username": "djamel_winner",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794724623189
+  },
+  "challenges/586d4616-3164-4f33-948f-639ec29acae6": {
+    "id": "586d4616-3164-4f33-948f-639ec29acae6",
+    "name": "Test Challenge",
+    "points": 50,
+    "referenceCode": "ECO-F57B4D",
+    "createdAt": 1794726341906
+  },
+  "users/djo": {
+    "username": "djo",
+    "salt": "25d763c9c0a529d795423b630d138aac",
+    "hash": "91da1e1c1a4b64358e664d9c2f90e05fbe83b73fc74d93c41a7f703568461575df65a6f50a24728f4fedd822d0d90d7a8421749992ac6c3258422a7ed6572fed",
+    "createdAt": 1794726897537
+  },
+  "sessions/5a8c481ae93615f3f02ce48c14c4c7994b71d00e6c84973bafe6c68a1a1a27ee": {
+    "username": "djo",
+    "createdAt": 1794726897538
+  },
+  "wins/7c1db855-b474-4be8-9532-315c52882f00": {
+    "id": "7c1db855-b474-4be8-9532-315c52882f00",
+    "username": "djo",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794726915288
+  },
+  "wins/0f492544-9e49-44b8-9fcd-c9a064e077ef": {
+    "id": "0f492544-9e49-44b8-9fcd-c9a064e077ef",
+    "username": "djo",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794727306277
+  },
+  "sessions/9221f4a11db3a9d85b105af441b604720bb8ad46fef6fc7c71228ed0f19ee92a": {
+    "username": "test_visitor_1",
+    "createdAt": 1794727329117
+  },
+  "wins/b33fe234-c92a-4dbd-ae57-0cd3cfa93af4": {
+    "id": "b33fe234-c92a-4dbd-ae57-0cd3cfa93af4",
+    "username": "test_visitor_1",
+    "challengeId": "6d4e0d06-34b8-4c73-843c-57fc96494b83",
+    "challenge": "Save The Cedars",
+    "points": 250,
+    "status": "confirmed",
+    "createdAt": 1794727329126,
+    "reviewedAt": 1794727329136
+  },
+  "wins/e500f873-e373-4703-9a2d-da6a678b25ae": {
+    "id": "e500f873-e373-4703-9a2d-da6a678b25ae",
+    "username": "djo",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794727580857,
+    "reviewedAt": 1794727837334
+  },
+  "users/djamel": {
+    "username": "djamel",
+    "salt": "eea9388aa349f3b10e4bc5602574073f",
+    "hash": "3191132af5b105e048763e5578f4fa0b239864c3a43306378f8d429486840fd93977b29143421ac2411afbe5cefd73758a361dfcdf40e95667cb5ace797cd2c5",
+    "createdAt": 1794727727361
+  },
+  "sessions/80b0a0e5d1c0483d00ad35cc7edd4cc31606db2c2af80be60d5ef77ede5393c7": {
+    "username": "djamel",
+    "createdAt": 1794727727363
+  },
+  "sessions/6eacd771d9ce57ebdc9972815c2a9321d1dca8e04a1384e2519d93698a0d8deb": {
+    "username": "test_visitor_1",
+    "createdAt": 1794727729446
+  },
+  "wins/3b2bc571-ddfb-420b-a360-230d9f5c0709": {
+    "id": "3b2bc571-ddfb-420b-a360-230d9f5c0709",
+    "username": "djamel",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794727736000,
+    "reviewedAt": 1794727835025
+  },
+  "users/djooo": {
+    "username": "djooo",
+    "salt": "d064c72b056c655b89a586a488f21a2b",
+    "hash": "4702d92a3b2c3d98d7ffb64061534fdb0f45399b12faf0efdaac1b4e49b2ee75a108b6e5b6116c7bb4249445dc4da425e2f87ad955265be0312882a410c01034",
+    "createdAt": 1794728882251
+  },
+  "sessions/3d292361a7fece48381e01a0af6c91b7f65e8d95f9261812315b7c46bfec4d27": {
+    "username": "djooo",
+    "createdAt": 1794728882258
+  },
+  "wins/9fb4a4a6-ce4e-4931-96c8-f81ea71886d2": {
+    "id": "9fb4a4a6-ce4e-4931-96c8-f81ea71886d2",
+    "username": "djooo",
+    "challengeId": "f8d78e64-94c7-4612-ba19-2eab65febc53",
+    "challenge": "try",
+    "points": 160,
+    "status": "confirmed",
+    "createdAt": 1794728900349,
+    "reviewedAt": 1794728921963
+  }
+}

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171A1F">
+  <meta name="description" content="Eco-Aware challenge: scan QR codes, win points, climb the leaderboard.">
+  <title>Eco-Aware Ranking</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/qrcode.js"></script>
+  <script defer src="vendor/jsQR.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero compact-hero">
+    <div class="topbar">
+      <!-- 3-Dots Menu for Admin (absolute positioned at top right) -->
+      <div class="menu-wrap">
+        <button type="button" id="kebab-btn" class="kebab" aria-label="More options" aria-expanded="false" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="kebab-menu" class="menu" hidden>
+          <button type="button" class="menu-item tab" data-tab="admin" id="menu-admin-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <span>Admin</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered brand title -->
+    <div class="brand-center">
+      <img class="logo main-logo" src="logo.png" alt="Eco-Aware logo" width="88" height="88">
+      <h1 class="brand-title">
+        <span class="brand-gradient-text">ECO-AWARE</span>
+      </h1>
+    </div>
+
+    <nav class="tabs" aria-label="Sections">
+      <button type="button" class="tab active" data-tab="visitor">Visitor</button>
+      <button type="button" class="tab" data-tab="leaderboard">Leaderboard</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= VISITOR ================= -->
+    <section id="visitor" class="panel active">
+
+      <!-- Code Verification Feedback Card (Replaces tree & fire) -->
+      <div id="code-result" class="code-result-card" hidden aria-live="polite">
+        <span class="side-light-circle left" aria-hidden="true"></span>
+        <span class="side-light-circle right" aria-hidden="true"></span>
+        <div class="result-light-beam" aria-hidden="true"></div>
+
+        <!-- VALID / SUCCESS VIEW -->
+        <div id="result-success" class="result-state" hidden>
+          <div class="result-icon success">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="result-body">
+            <span class="result-tag success">CODE VERIFIED</span>
+            <h3 class="result-title success">CONGRATULATIONS!</h3>
+            <p class="result-desc" id="success-desc">The entered code is true and verified!</p>
+            <div class="result-pts-badge" id="success-points">+0 Points Earned!</div>
+          </div>
+        </div>
+
+        <!-- INVALID / ERROR VIEW -->
+        <div id="result-error" class="result-state" hidden>
+          <div class="result-icon error">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+          </div>
+          <div class="result-body">
+            <span class="result-tag error">INVALID CODE</span>
+            <h3 class="result-title error">INVALID CODE</h3>
+            <p class="result-desc" id="error-desc">The entered code does not match any active game challenge.</p>
+          </div>
+        </div>
+
+        <button type="button" id="close-result" class="result-close" aria-label="Dismiss">&times;</button>
+      </div>
+
+      <!-- Logged out: Glassmorphism Auth Card -->
+      <div id="auth" class="card glass-auth-card">
+        <span class="side-light-circle left" aria-hidden="true"></span>
+        <span class="side-light-circle right" aria-hidden="true"></span>
+
+        <!-- LOGIN VIEW -->
+        <div id="login-view">
+          <div class="auth-header">
+            <h2 class="auth-title">Sign In</h2>
+            <p class="auth-subtitle">Welcome back</p>
+          </div>
+          <form id="login-form" class="auth-form">
+            <div class="input-group">
+              <input name="username" type="text" placeholder="User Name" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+              <span class="input-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input name="password" type="password" id="login-pass" placeholder="Password" autocomplete="current-password" required>
+              <button type="button" class="input-icon toggle-pass" data-target="login-pass" aria-label="Toggle password visibility">
+                <svg class="eye-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div class="auth-options">
+              <label class="remember-label">
+                <input type="checkbox" id="remember-me" checked>
+                <span>Remember me</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn auth-btn">Sign In</button>
+
+            <div class="auth-footer">
+              <span>Don't have an account?</span>
+              <button type="button" id="go-to-register" class="link-btn">Sign Up</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- REGISTER VIEW -->
+        <div id="register-view" hidden>
+          <div class="auth-header">
+            <h2 class="auth-title">Sign Up</h2>
+            <p class="auth-subtitle">Join the Eco-Aware challenge</p>
+          </div>
+          <form id="register-form" class="auth-form">
+            <div class="input-group">
+              <input name="username" type="text" placeholder="User Name (3-30 chars)" autocomplete="username" autocapitalize="none" spellcheck="false" required pattern="[a-zA-Z0-9_]{3,30}" title="3 to 30 letters, digits or underscores">
+              <span class="input-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input name="password" type="password" id="reg-pass" placeholder="Password (min 6)" autocomplete="new-password" minlength="6" required>
+              <button type="button" class="input-icon toggle-pass" data-target="reg-pass" aria-label="Toggle password visibility">
+                <svg class="eye-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="eye-closed hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+
+            <button type="submit" class="btn auth-btn">Create account</button>
+
+            <div class="auth-footer">
+              <span>Already have an account?</span>
+              <button type="button" id="go-to-login" class="link-btn">Sign In</button>
+            </div>
+          </form>
+        </div>
+
+        <p id="auth-msg" class="msg" role="alert"></p>
+      </div>
+
+      <!-- Logged in -->
+      <div id="scanner-area" class="card glass-auth-card" hidden>
+        <span class="side-light-circle left" aria-hidden="true"></span>
+        <span class="side-light-circle right" aria-hidden="true"></span>
+        <div class="row between">
+          <p>Logged in as <strong id="who" class="who-badge"></strong></p>
+          <button type="button" id="logout" class="chip">Log out</button>
+        </div>
+        <h2>Scan Game QR Code</h2>
+        <div class="actions">
+          <button type="button" id="start-scan" class="btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <span>Open camera</span>
+          </button>
+          <button type="button" id="check-win" class="chip">Check my win status</button>
+        </div>
+        <div class="video-wrap" hidden>
+          <video id="video" playsinline muted></video>
+          <p class="hint">Point your camera at the challenge QR code…</p>
+          <button type="button" id="stop-scan" class="chip">Cancel</button>
+        </div>
+        <details>
+          <summary>Camera not working? Paste the code instead</summary>
+          <textarea id="manual-code" rows="2" placeholder="Paste or type the QR code text here" spellcheck="false"></textarea>
+          <button type="button" id="manual-submit" class="btn secondary">Verify & Claim Points</button>
+        </details>
+        <p id="scan-msg" class="msg" role="status"></p>
+      </div>
+    </section>
+
+    <!-- ================= LEADERBOARD ================= -->
+    <section id="leaderboard" class="panel">
+      <div class="card ranking-card">
+        <span class="side-light-circle left" aria-hidden="true"></span>
+        <span class="side-light-circle right" aria-hidden="true"></span>
+        <div class="ranking-header">
+          <div>
+            <h2 class="ranking-title">ECO-AWARE RANKING</h2>
+            <p class="members-count" id="members-count">0 participants</p>
+          </div>
+          <button type="button" id="refresh-leaderboard" class="pill-btn">Refresh</button>
+        </div>
+
+        <!-- 3-Column Podium -->
+        <div id="podium-area" class="ranking-podium"></div>
+
+        <!-- Ranks 4+ with progress bars -->
+        <div id="ranking-list" class="ranking-list"></div>
+
+        <p id="leaderboard-msg" class="msg" role="status"></p>
+      </div>
+    </section>
+
+    <!-- ================= ADMIN ================= -->
+    <section id="admin" class="panel">
+      <div id="admin-login" class="card glass-auth-card">
+        <span class="side-light-circle left" aria-hidden="true"></span>
+        <span class="side-light-circle right" aria-hidden="true"></span>
+        <div class="auth-header">
+          <h2 class="auth-title">Admin Access</h2>
+        </div>
+        <form id="admin-login-form" class="auth-form">
+          <div class="input-group">
+            <input name="token" type="password" id="admin-pass" placeholder="" autocomplete="off" required>
+            <button type="button" class="input-icon toggle-pass" data-target="admin-pass" aria-label="Toggle token visibility">
+              <svg class="eye-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <svg class="eye-closed hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <button type="submit" class="btn auth-btn">Enter</button>
+        </form>
+        <p id="admin-login-msg" class="msg" role="alert"></p>
+      </div>
+
+      <div id="admin-area" hidden>
+        <div class="row between">
+          <p>Admin mode</p>
+          <button type="button" id="admin-logout" class="chip">Log out</button>
+        </div>
+
+        <div class="row between" style="margin: 12px 0 16px; flex-wrap: wrap; gap: 10px;">
+          <p style="margin: 0; font-size: 14px; color: var(--muted);">Database Export:</p>
+          <div style="display: flex; gap: 8px;">
+            <a href="/participants_database.xls" download="eco_aware_participants.xls" class="chip" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              📊 Excel (.xls)
+            </a>
+            <a href="/participants_database.csv" download="eco_aware_participants.csv" class="chip" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              📄 CSV (.csv)
+            </a>
+          </div>
+        </div>
+
+        <div class="card glass-auth-card">
+          <span class="side-light-circle left" aria-hidden="true"></span>
+          <span class="side-light-circle right" aria-hidden="true"></span>
+          <h2>Add a Game Challenge</h2>
+          <form id="challenge-form" class="inline-form">
+            <div class="form-grid-2">
+              <label>
+                <span>Challenge Name</span>
+                <input name="name" placeholder="e.g. Tree Planting Trivia" maxlength="80" required>
+              </label>
+              <label>
+                <span>Points</span>
+                <input name="points" type="number" inputmode="numeric" min="1" max="1000" placeholder="e.g. 150" required>
+              </label>
+            </div>
+            <label>
+              <span>Reference QR Code / Game Key</span>
+              <div class="code-input-row">
+                <input name="referenceCode" id="ref-code-input" placeholder="e.g. ECO-GAME-01 or game secret string" required>
+                <button type="button" id="generate-code-btn" class="chip" title="Generate random unique code">🎲 Generate</button>
+              </div>
+              <small class="hint">The visitor's scanned QR code will be compared against this reference code.</small>
+            </label>
+            <button type="submit" class="btn auth-btn">Create Challenge & Generate QR</button>
+          </form>
+          <p id="challenge-msg" class="msg" role="status"></p>
+          <div id="challenge-list" class="grid"></div>
+        </div>
+
+        <div class="card">
+          <div class="row between">
+            <h2>Player Wins Log</h2>
+            <select id="win-filter" aria-label="Filter wins">
+              <option value="pending" selected>Pending (Requires Approval)</option>
+              <option value="">All Submissions</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </div>
+          <div id="win-list"></div>
+          <p id="win-msg" class="msg" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="atmosphere-canvas" aria-hidden="true"></canvas>
+</body>
+</html>

@@ -1,0 +1,85 @@
+Created At: 2026-11-15T08:39:25+01:00
+Completed At: 2026-11-15T08:39:25+01:00
+Created At: 2026-11-15T08:39:25+01:00
+Completed At: 2026-11-15T08:39:25+01:00
+Showing lines 1-80 of 1410
+1: /* ==========================================================================
+2:    Eco Geeks Club Â· Forest Fire Awareness
+3:    Official 4-Color Theme:
+4:      - Dark Navy:  #171A1F
+5:      - Leaf Green: #79AE44
+6:      - Fire Red:   #DF3331
+7:      - Snow White: #F8FAF9
+8:    ========================================================================== */
+9: 
+10: :root {
+11:   /* Core brand palette */
+12:   --navy: #171A1F;
+13:   --green: #79AE44;
+14:   --red: #DF3331;
+15:   --snow: #F8FAF9;
+16: 
+17:   /* Theme tokens: Dark Navy (default) */
+18:   --bg: #171A1F;
+19:   --bg-secondary: #121519;
+20:   --ink: #F8FAF9;
+21:   --muted: #9aa4af;
+22:   --card: #20252e;
+23:   --card-elevated: #262c36;
+24:   --line: #2e353f;
+25:   --input-bg: #191d24;
+26:   --shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.45);
+27:   color-scheme: dark;
+28: }
+29: 
+30: /* Base resets & typography */
+31: *, *::before, *::after {
+32:   box-sizing: border-box;
+33: }
+34: 
+35: html {
+36:   background: var(--navy);
+37:   color-scheme: inherit;
+38: }
+39: 
+40: body {
+41:   margin: 0;
+42:   min-height: 100vh;
+43:   background: var(--bg);
+44:   color: var(--ink);
+45:   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+46:   line-height: 1.5;
+47:   transition: background-color 0.25s ease, color 0.25s ease;
+48:   -webkit-text-size-adjust: 100%;
+49: }
+50: 
+51: button, input, select, textarea {
+52:   font-family: inherit;
+53:   font-size: inherit;
+54: }
+55: 
+56: :focus-visible {
+57:   outline: 2px solid var(--green);
+58:   outline-offset: 2px;
+59: }
+60: 
+61: /* Screen readers */
+62: .sr-only {
+63:   position: absolute !important;
+64:   width: 1px;
+65:   height: 1px;
+66:   padding: 0;
+67:   margin: -1px;
+68:   overflow: hidden;
+69:   clip: rect(0, 0, 0, 0);
+70:   white-space: nowrap;
+71:   border: 0;
+72: }
+73: 
+74: /* Atmosphere canvas */
+75: #atmosphere-canvas {
+76:   position: fixed;
+77:   inset: 0;
+78:   width: 100%;
+79:   height: 100%;
+80:   pointer-events: none;

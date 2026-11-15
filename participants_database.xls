@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Segoe UI" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="Header">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#79AE44"/>
+   </Borders>
+   <Font ss:FontName="Segoe UI" ss:Size="11" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#171A1F" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="RankTop">
+   <Alignment ss:Horizontal="Center"/>
+   <Font ss:FontName="Segoe UI" ss:Bold="1" ss:Color="#79AE44"/>
+  </Style>
+  <Style ss:ID="Centered">
+   <Alignment ss:Horizontal="Center"/>
+  </Style>
+  <Style ss:ID="BoldText">
+   <Font ss:FontName="Segoe UI" ss:Bold="1"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Participants Database">
+  <Table>
+   <Column ss:Width="50"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="170"/>
+   <Column ss:Width="170"/>
+   <Row ss:Height="26">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Rank</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Participant Name</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Confirmed Points</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Pending Points</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Total Scans</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Confirmed Scans</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Pending Scans</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Registration Date</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Last Activity</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="RankTop"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:47:12</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:22:09</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="RankTop"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djo</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">480</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:14:57</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:26:20</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="RankTop"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djamel_winner</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:35:35</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:37:03</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djamel</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:28:47</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:28:56</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djooo</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:48:02</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:48:20</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djamel_cns</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 22:48:28</Data></Cell>
+    <Cell><Data ss:Type="String">N/A</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+ <Worksheet ss:Name="Scans &amp; Wins Log">
+  <Table>
+   <Column ss:Width="200"/>
+   <Column ss:Width="140"/>
+   <Column ss:Width="180"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="170"/>
+   <Row ss:Height="26">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Scan ID</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Participant</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Challenge Name</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Points</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Status</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Date &amp; Time</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">9fb4a4a6-ce4e-4931-96c8-f81ea71886d2</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djooo</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:48:20</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">3b2bc571-ddfb-420b-a360-230d9f5c0709</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djamel</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:28:56</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">e500f873-e373-4703-9a2d-da6a678b25ae</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djo</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:26:20</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">b33fe234-c92a-4dbd-ae57-0cd3cfa93af4</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:22:09</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">0f492544-9e49-44b8-9fcd-c9a064e077ef</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djo</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:21:46</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">7c1db855-b474-4be8-9532-315c52882f00</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djo</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 08:15:15</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">f6a70ed2-58fb-4e06-9496-00a651668f5e</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">djamel_winner</Data></Cell>
+    <Cell><Data ss:Type="String">try</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">160</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:37:03</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">26dedacb-0251-4ce0-9425-daadf3cd7a77</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:29:54</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">ffdf4125-f13e-41cf-9e9b-9d70a1790d6d</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:27:45</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">1128ca9e-2b01-4651-a9fc-a5cc1729dee3</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 07:22:54</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">ae72ed1e-5a0a-4563-b332-a1c4a0899c50</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 00:42:42</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">b8af37ac-f0be-40f0-9d44-4d3bff3cd8a0</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 00:12:23</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">3b89a9a2-5f3d-4302-ad10-cd8a29787057</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">15/11/2026, 00:08:57</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">28e8c5de-7f92-4c64-bf1b-4519b087b7a3</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:54:26</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">04cff24c-99b6-446e-a4e5-e7a1b1b5bdfe</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:53:45</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">182cebe8-34e3-4e40-9723-10814c72fffe</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:53:45</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">dd8844f6-0942-40b6-a77a-d0d84e3cbcfa</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:53:45</Data></Cell>
+   </Row>
+   <Row ss:Height="20">
+    <Cell><Data ss:Type="String">a532f127-d780-49bc-8915-218b66fc040b</Data></Cell>
+    <Cell ss:StyleID="BoldText"><Data ss:Type="String">test_visitor_1</Data></Cell>
+    <Cell><Data ss:Type="String">Save The Cedars</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="Centered"><Data ss:Type="String">CONFIRMED</Data></Cell>
+    <Cell><Data ss:Type="String">14/11/2026, 23:47:12</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
